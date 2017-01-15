@@ -1,0 +1,18 @@
+{
+  "name": "CSS-Matrix",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "index.js",
+  "repository": "https://github.com/Zhangdroid/CSS-Matrix",
+  "author": "Zhuo Zhang <contrary.zhuo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "webpack": "beta"
+  }
+}
