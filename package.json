@@ -2,7 +2,7 @@
   "name": "CSS-Matrix",
   "version": "0.0.1",
   "description": "test",
-  "main": "index.js",
+  "main": "dist/matrix.min.js",
   "repository": "https://github.com/Zhangdroid/CSS-Matrix",
   "author": "Zhuo Zhang <contrary.zhuo@gmail.com>",
   "license": "MIT",
