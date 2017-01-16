@@ -77,8 +77,9 @@ const translate = (x = 0, y = 0, z = 0) => [
   x,    y,    z,   1
 ]
 
-const rotate = (axis, d) => {
+const rotate = (axis, degree) => {
   if (!isNumeric(d)) throw new Error('Unaccepted value. Degree must be a number')
+  const a = degree * (180 / Math.PI)
   const sin = Math.sin
   const cos = Math.cos
 
@@ -88,23 +89,23 @@ const rotate = (axis, d) => {
     case 'x':
       result = [
         1,       0,        0,     0,
-        0,  cos(d),  -sin(d),     0,
-        0,  sin(d),   cos(d),     0,
+        0,  cos(a),  -sin(a),     0,
+        0,  sin(a),   cos(a),     0,
         0,       0,        0,     1
       ]
       break
     case 'y':
       result = [
-        cos(d),   0, sin(d),   0,
+        cos(a),   0, sin(a),   0,
         0,        1,      0,   0,
-        -sin(d),  0, cos(d),   0,
+        -sin(a),  0, cos(a),   0,
         0,        0,      0,   1
       ]
       break
     case 'z':
       result = [
-        cos(d), -sin(d),    0,    0,
-        sin(d),  cos(d),    0,    0,
+        cos(a), -sin(a),    0,    0,
+        sin(a),  cos(a),    0,    0,
         0,            0,    1,    0,
         0,            0,    0,    1
       ]
