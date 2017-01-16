@@ -54,6 +54,8 @@ function multiplyMatrices (matrixA, matrixB) {
 }
 
 function generateMatrix (matrices) {
+  if (!matrices || !matrices[0]) throw new Error('Unaccepted value. Must be an array')
+
   let inputMatrix = matrices[0]
 
   for(let i = 1; i < matrices.length; i++) {
@@ -63,22 +65,32 @@ function generateMatrix (matrices) {
   return inputMatrix
 }
 
-const scale =  (w = 1, h = 1, d = 1) => [
-  w,    0,    0,   0,
-  0,    h,    0,   0,
-  0,    0,    d,   0,
-  0,    0,    0,   1
-]
+const scale =  (w = 1, h = 1, d = 1) => {
+  if (!isNumeric(w) || !isNumeric(h) || !isNumeric(d)) {
+    throw new Error('Unaccepted value. Must be a number')
+  }
+  return [
+    w,    0,    0,   0,
+    0,    h,    0,   0,
+    0,    0,    d,   0,
+    0,    0,    0,   1
+  ]
+}
 
-const translate = (x = 0, y = 0, z = 0) => [
-  1,    0,    0,   0,
-  0,    1,    0,   0,
-  0,    0,    1,   0,
-  x,    y,    z,   1
-]
+const translate = (x = 0, y = 0, z = 0) => {
+  if (!isNumeric(x) || !isNumeric(y) || !isNumeric(z)) {
+    throw new Error('Unaccepted value. Must be a number')
+  }
+  return [
+    1,    0,    0,   0,
+    0,    1,    0,   0,
+    0,    0,    1,   0,
+    x,    y,    z,   1
+  ]
+}
 
 const rotate = (axis, degree) => {
-  if (!isNumeric(d)) throw new Error('Unaccepted value. Degree must be a number')
+  if (!isNumeric(degree)) throw new Error('Unaccepted value. Degree must be a number')
   const a = degree * (180 / Math.PI)
   const sin = Math.sin
   const cos = Math.cos
