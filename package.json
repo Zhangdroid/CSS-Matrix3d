@@ -1,6 +1,6 @@
 {
   "name": "css-matrix3d",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CSS 3D Matrix transformation",
   "main": "dist/matrix.min.js",
   "repository": "https://github.com/Zhangdroid/CSS-Matrix",
