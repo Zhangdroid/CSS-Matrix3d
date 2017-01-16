@@ -1,10 +1,11 @@
 {
   "name": "css-matrix3d",
   "version": "0.0.1",
-  "description": "test",
+  "description": "CSS 3D Matrix transformation",
   "main": "dist/matrix.min.js",
   "repository": "https://github.com/Zhangdroid/CSS-Matrix",
   "author": "Zhuo Zhang <contrary.zhuo@gmail.com>",
+  "keywords": ["matrix", "css", "3d"],
   "license": "MIT",
   "scripts": {
     "build": "webpack -p",
